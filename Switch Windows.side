@@ -1,0 +1,92 @@
+{
+  "id": "3a12690d-918a-4082-be05-313df6c53f50",
+  "version": "2.0",
+  "name": "Switch Windows",
+  "url": "https://itmscoaching.herokuapp.com/switch-window",
+  "tests": [{
+    "id": "dd298e1f-c504-45d2-8227-3c4c5bf571a6",
+    "name": "switch windows",
+    "commands": [{
+      "id": "8d68b2ae-fbd9-4e81-b9fc-c4f64cd11717",
+      "comment": "",
+      "command": "open",
+      "target": "https://itmscoaching.herokuapp.com/switch-window",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85cf9c20-5990-463d-b1bf-ffe0935e25f8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1257x799",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7633243e-4ed6-46c0-b078-8c1b9a6510a8",
+      "comment": "",
+      "command": "click",
+      "target": "id=new-tab-button",
+      "targets": [
+        ["id=new-tab-button", "id"],
+        ["css=#new-tab-button", "css:finder"],
+        ["xpath=//button[@id='new-tab-button']", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Open new tab')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win9353",
+      "windowTimeout": 2000
+    }, {
+      "id": "731ff07d-439f-4b28-899c-912cfc6b2572",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e92b79c-c65b-43c3-8226-8ab47392d149",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win9353}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2646ea45-1429-49eb-b221-4206398887fe",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3901534-a06c-4836-916f-52e353c5b0c5",
+      "comment": "",
+      "command": "click",
+      "target": "id=alert-button",
+      "targets": [
+        ["id=alert-button", "id"],
+        ["css=#alert-button", "css:finder"],
+        ["xpath=//button[@id='alert-button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Open alert')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9dab7d63-411b-4eae-bbd9-cb5296102bc8",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "This is a test alert!",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "37c3fb04-f7de-42fc-aaba-6b25990e192a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["dd298e1f-c504-45d2-8227-3c4c5bf571a6"]
+  }],
+  "urls": [],
+  "plugins": []
+}
